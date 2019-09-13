@@ -24,6 +24,7 @@ const OtherDialogProps = {
 }
 
 const DialogSchema = new MuiComponentSchema(DialogProps)
+const OverrideDialogSchema = new MuiComponentSchema(OtherDialogProps)
 
 const Dialog = (props) => {
     return <div>
@@ -34,6 +35,6 @@ const Dialog = (props) => {
 }
 
 const StrictDialog = new MuiComponent(Dialog, DialogSchema)
-const OverrideDialog = new MuiComponent(Dialog, OtherDialogProps)
+const OverrideDialog = new MuiComponent(Dialog, OverrideDialogSchema)
 // if'n you don't want a schema:
 const DialogLoose = new MuiComponent(Dialog)
